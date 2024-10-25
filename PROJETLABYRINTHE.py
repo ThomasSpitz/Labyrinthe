@@ -64,8 +64,6 @@ class Labyrinthe:
                     Y.append(None)
 
         plt.plot(X,Y)
-        print(X)
-        print(Y)
         plt.title('Labyrtinthe')
         plt.show()
 
@@ -243,3 +241,12 @@ def explorer(laby):
             P.depile()
         T=[]
 
+m = int(input("Entrer la largeur du labyrinthe : "))
+n = int(input("Entrer la hauteur du labyrinthe : "))
+l= creation(m,n)
+while 1 :
+    rep = input("Que voulez-vous faire ? (afficher:a,solution:s)")
+    if rep == 'a' :
+        l.show()
+    elif rep == 's':
+        l.solution()
